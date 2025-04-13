@@ -2,7 +2,24 @@
 Early Life Cycle Player Engagement & Retention
 
 **Context:**
-This is a simulated analysis of a new gameplay feature launch in a live-service multiplayer game. The dataset models a user acquisition campaign that adds 1,000 players per day over 30 days, capturing session-level events such as logins, stage progression, and scoring. The analysis focuses on understanding early engagement patterns and modeling retention behavior within the first week of a player’s lifecycle. The goal is to identify drop-off patterns and player segments to inform re-engagement strategy and onboarding design, helping product, monetization, and growth teams extend playtime and increase monetization value per acquisition.
+This is a simulated analysis of a new gameplay feature launch in a live-service multiplayer game. The project applies Exploratory Data Analysis (EDA), statistical hypothesis testing, and predictive modeling to generate recommendations on growth strategy for a game product team. The dataset adds 1,000 players per day over 30 days, capturing events such as stage progression and scoring. The analysis focuses on engagement patterns **within the first week of a player’s lifecycle** with a goal to **identify drop-off patterns and high-risk segments**. In real scenarios this analysis would support product teams in **extending player longevity** and **increasing monetization value per acquisition**.
+
+**Dataset:**
+
+| Column         | Description                                                 | Data Type |
+|----------------|-------------------------------------------------------------|-----------|
+| `id`           | Unique event identifier                                     | object    |
+| `cohort_id`    | Identifier of corresponding player's acquisition cohort     | object    |
+| `player_id`    | Unique identifier for each player                           | object    |
+| `player_type`  | Label indicating player classification (e.g. casual, churner) | object    |
+| `session_id`   | Unique identifier for each session                          | object    |
+| `event_type`   | Type of in-game event recorded (e.g. login, stage_start)    | object    |
+| `timestamp`    | Date and time when the event occurred                       | object    |
+| `stage_id`     | Identifier of the stage associated with the event           | object    |
+| `stage_score`  | Score achieved in the stage, if applicable                  | float     |
+
+
+<br><br>
 
 **Problem Statement:**  <FIXME>
 During the rollout of new gameplay features in live-service games, players may engage in initial sessions but drop off before reaching monetizable touchpoints such as reward unlocks, store access, or social mechanics. This could signal unclear value propositions, delayed progression pacing, or misaligned difficulty curves in the in-game experience. These disengagement points can lead to lost revenue exposure, reduced ad impressions, and premature churn during the highest-risk phase of the player lifecycle.
